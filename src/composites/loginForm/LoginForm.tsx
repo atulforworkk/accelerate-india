@@ -3,7 +3,7 @@ import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
-import { initialValues,validationSchema } from "./constants";
+import { initialValues } from "./constants";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "store";
 import { login } from "@/actions/login";
@@ -24,7 +24,6 @@ const LoginForm = (props: Props) => {
         .required("Password should be valid  "),
     }),
     onSubmit: (values) => {
-      // Handle form submission
       dispatch(login({
         username: 'emilys',
         password: 'emilyspass',
@@ -47,7 +46,7 @@ const LoginForm = (props: Props) => {
           <Input
           placeholder="Email"
           name="username" 
-          className="w-96"
+        className="w-full sm:w-96"
           type="email"
           value={formik.values.username}
           onChange={formik.handleChange}
@@ -55,13 +54,13 @@ const LoginForm = (props: Props) => {
           error={formik.touched.username && formik.errors.username}
         />
         {formik.touched.username && formik.errors.username ? (
-          <div className="text-red-500 text-sm mx-4">
+          <div className="text-red-500 text-sm ">
             {formik.errors.username}
           </div>
         ) : null}
         </div>
   
-        <div className="">      
+        <div className="">     
           <label htmlFor="password">Password</label>
         <Input
           placeholder="Password"
@@ -73,7 +72,7 @@ const LoginForm = (props: Props) => {
           error={formik.touched.password && formik.errors.password}
         />
         {formik.touched.password && formik.errors.password ? (
-          <div className="text-red-500 text-sm mx-4">
+          <div className="text-red-500 text-sm ">
             {formik.errors.password}
           </div>
         ) : null}
@@ -81,7 +80,7 @@ const LoginForm = (props: Props) => {
 
         <Button
           type="submit"
-          className="w-96 bg-main-color rounded-full hover:bg-custom-Purple"
+          className="w-96  bg-main-color rounded-full hover:bg-custom-Purple my-4 "
          
         >
           Login
