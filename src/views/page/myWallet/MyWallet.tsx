@@ -1,19 +1,16 @@
+import PostAuthHeader from "@/components/postAuthHeader/PostAuthHeader";
+import TransactionView from "@/composites/transaction/TransactionView";
 import { Button, Input, Radio } from "@mantine/core";
 import images from "images/images";
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 type Props = {};
 
 const MyWallet = (props: Props) => {
+
   return (
     <div>
-      {/* Phone header */}
-      <div className="p-2 flex items-center">
-        <button className="bg-main-color p-2 w-8 h-8 rounded-full text-white flex items-center justify-center ">
-          &lt;
-        </button>
-        <h1 className="text-center flex-grow font-bold">My wallet</h1>
-      </div>
+      <PostAuthHeader heading="My Wallet" />
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-2">
         {/* USER SECTION  */}
         <div className="border round-md col-span-6 ">
@@ -69,15 +66,7 @@ const MyWallet = (props: Props) => {
         </div>
       </div>
       <div>
-        {/* transaction div */}
-        <div className="flex items-center justify-between m-4">
-          <h1 className=" font-bold">Transaction</h1>
-          {/* fix */}
-          <div className="flex items-center border-main-color border text-main-color bg-light-gray px-3 py-0.5 justify-around rounded-full">
-            <p className="text-sm">Select Month</p>
-            <img src={images.downArrowIcon} alt="" />
-            </div>
-        </div>
+        <TransactionView />
       </div>
     </div>
   );
@@ -86,8 +75,12 @@ const MyWallet = (props: Props) => {
 export default MyWallet;
 
 const Card = () => {
+  const navigate = useNavigate();
+  const handleClick =()=>{
+    navigate("/payment")
+  }
   return (
-    <div className="border rounded-2xl bg-light-gray  border-red-300 min-w-[350px]">
+    <div className="border rounded-2xl bg-light-gray border-black min-w-[350px]">
       <div className="flex justify-between items-center m-3 ">
         <h1 className="font-bold">All credits to your wallet</h1>
         <div className=" px-3  py-0.5 rounded-full bg-light-purple justify-around">
@@ -118,7 +111,7 @@ const Card = () => {
       />
       <button
         className="bg-main-color text-white p-2 w-full rounded-full my-3"
-        disabled
+        onClick={handleClick}
       >
         Proceed to pay
       </button>

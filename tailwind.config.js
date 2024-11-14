@@ -2,11 +2,6 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    // screens: {
-    //   phone: "400px",
-    //   laptop: "1024px",
-    //   desktop: "1280px",
-    // },
     extend: {
       colors: {
         "main-color": "#725690",
