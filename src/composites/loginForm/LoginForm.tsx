@@ -45,7 +45,7 @@ const LoginForm = (props: Props) => {
         <Input
           placeholder="Email"
           className="phone:mx-4 phone:my-2"
-          name="email"
+          name="username" 
           type="email"
           value={formik.values.username}
           onChange={formik.handleChange}

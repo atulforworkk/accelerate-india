@@ -68,6 +68,17 @@ const MyWallet = (props: Props) => {
           </div>
         </div>
       </div>
+      <div>
+        {/* transaction div */}
+        <div className="flex items-center justify-between m-4">
+          <h1 className=" font-bold">Transaction</h1>
+          {/* fix */}
+          <div className="flex items-center border-main-color border text-main-color bg-light-gray px-3 py-0.5 justify-around rounded-full">
+            <p className="text-sm">Select Month</p>
+            <img src={images.downArrowIcon} alt="" />
+            </div>
+        </div>
+      </div>
     </div>
   );
 };
@@ -76,7 +87,7 @@ export default MyWallet;
 
 const Card = () => {
   return (
-    <div className="border rounded-md bg-light-gray border-red-300 min-w-[350px]">
+    <div className="border rounded-2xl bg-light-gray  border-red-300 min-w-[350px]">
       <div className="flex justify-between items-center m-3 ">
         <h1 className="font-bold">All credits to your wallet</h1>
         <div className=" px-3  py-0.5 rounded-full bg-light-purple justify-around">
@@ -101,7 +112,16 @@ const Card = () => {
       </div>
       <p className="text-sm font-light m-1">or</p>
       <h1 className="font-semibold text-xl m-1">Enter Amount Manually </h1>
-      <input className="rounded-full w-full p-2" placeholder="Enter here" />
+      <input
+        className="rounded-full w-full p-2 my-3"
+        placeholder="Enter here"
+      />
+      <button
+        className="bg-main-color text-white p-2 w-full rounded-full my-3"
+        disabled
+      >
+        Proceed to pay
+      </button>
     </div>
   );
 };
