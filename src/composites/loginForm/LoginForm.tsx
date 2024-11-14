@@ -34,18 +34,20 @@ const LoginForm = (props: Props) => {
   const {values}= formik;
   console.log("🚀 ~ LoginForm ~ values:", values)
   return (
-    <div className="phone:flex phone:flex-col phone:justify-center phone:h-screen laptop:flex laptop:items-center laptop:justify-center laptop:h-screen">
-      <h1 className="phone:text-2xl phone:font-semibold phone:text-center laptop:font-semibold">
+<div className="h-screen flex flex-col justify-center items-center">
+      <h1 className="text-2xl font-semibold text-center ">
         Login
       </h1>
       <form
         onSubmit={formik.handleSubmit}
-        className="phone:flex phone:flex-col laptop:w-3/12  laptop:flex laptop:justify-center  "
+        className=""
       >
-        <Input
+        <div className="">      
+          <label htmlFor="">Email</label>
+          <Input
           placeholder="Email"
-          className="phone:mx-4 phone:my-2"
           name="username" 
+          className="w-96"
           type="email"
           value={formik.values.username}
           onChange={formik.handleChange}
@@ -53,14 +55,16 @@ const LoginForm = (props: Props) => {
           error={formik.touched.username && formik.errors.username}
         />
         {formik.touched.username && formik.errors.username ? (
-          <div className="text-red-500 text-sm phone:mx-4">
+          <div className="text-red-500 text-sm mx-4">
             {formik.errors.username}
           </div>
         ) : null}
-
+        </div>
+  
+        <div className="">      
+          <label htmlFor="password">Password</label>
         <Input
           placeholder="Password"
-          className="phone:mx-4 phone:my-2"
           name="password"
           type="password"
           value={formik.values.password}
@@ -69,14 +73,15 @@ const LoginForm = (props: Props) => {
           error={formik.touched.password && formik.errors.password}
         />
         {formik.touched.password && formik.errors.password ? (
-          <div className="text-red-500 text-sm phone:mx-4">
+          <div className="text-red-500 text-sm mx-4">
             {formik.errors.password}
           </div>
         ) : null}
+        </div>
 
         <Button
           type="submit"
-          className="phone:m-4 bg-main-color rounded-full hover:bg-custom-Purple"
+          className="w-96 bg-main-color rounded-full hover:bg-custom-Purple"
          
         >
           Login
