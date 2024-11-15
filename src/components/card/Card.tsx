@@ -20,7 +20,7 @@ const Card = () => {
         <p className="text-sm m-3 font-light">
           Choose from our most purchased options.
         </p>
-        <div className="border border-main-color rounded-2xl flex flex-col  ">
+        {/* <div className="border border-main-color rounded-2xl flex flex-col  ">
         <div className="flex items-center">
           <Radio />
           <img src={images.brandlogo} alt="" className="w-4 h-4 m-1 " />
@@ -34,6 +34,12 @@ const Card = () => {
           <h1 className="font-semibold text-xl m-1">14500</h1>
           <p className="text-sm font-light m-1">Credits</p>
         </div>
+        </div> */}
+        <div className="flex overflow-visible">
+    
+        <Credits />
+        <Credits/>
+        <Credits/>
         </div>
         <p className="text-sm font-light m-1">or</p>
         <ManualAmount/>
@@ -41,3 +47,28 @@ const Card = () => {
     );
   };
   export default Card;
+
+  import React from 'react'
+  
+  type Props = {}
+  
+  const Credits = (props: Props) => {
+    return (
+      <div className="border border-main-color rounded-2xl flex flex-col  ">
+      <div className="flex items-center">
+        <Radio />
+        <img src={images.brandlogo} alt="" className="w-4 h-4 m-1 " />
+        <h1 className="font-semibold text-xl m-1">15000</h1>
+        <p className="text-sm font-light m-1">Credits</p>
+        <p className="mx-auto">30% off</p>
+      </div>
+      <p className="text-sm font-light m-1 px-5">with</p>
+      <div className="flex items-center px-5">
+      <h1 className="font-semibold text-xl m-1 line-through text-[#00083046]">15000</h1>
+        <h1 className="font-semibold text-xl m-1">14500</h1>
+        <p className="text-sm font-light m-1">Credits</p>
+      </div>
+      </div>
+    )
+  }
+  

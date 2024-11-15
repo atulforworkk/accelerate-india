@@ -48,7 +48,7 @@ const ManualAmount = () => {
         </button>
       ) : ( */}
         <button
-          className="bg-main-color text-white p-2 w-full rounded-full my-3"
+          className="bg-main-color text-white p-2 w-full rounded-full my-3 mx-2"
           onClick={handleClick}
         >
           Proceed to pay

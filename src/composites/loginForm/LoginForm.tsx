@@ -1,7 +1,6 @@
 import { Button, Input } from "@mantine/core";
 import { useFormik } from "formik";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { initialValues } from "./constants";
 import { useDispatch } from "react-redux";
@@ -10,14 +9,12 @@ import { login } from "@/actions/login";
 type Props = {};
 
 const LoginForm = (props: Props) => {
-  const navigate = useNavigate();
   const dispatch = useDispatch<AppDispatch>()
 
 
   const formik = useFormik({
    initialValues,
     validationSchema: Yup.object({
-      // username: Yup.string().email("Invalid email address").required("Email is required "),
       password: Yup.string()
         .min(8, "Password must be at least 8 characters")
         .required("Password should be valid  "),

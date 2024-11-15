@@ -1,4 +1,8 @@
-export default { useAuthStore };
+// export default { useAuthStore };
 
-// In the importing file
-import { useAuthStore } from "../store";
+
+// export const useAuthStore = () => {
+//   // Your hook logic here
+// };
+// // In the importing file
+// import { useAuthStore } from "../store";
