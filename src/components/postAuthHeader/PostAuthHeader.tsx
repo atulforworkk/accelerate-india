@@ -9,10 +9,12 @@ type Props = {
 const PostAuthHeader = ({ heading }: Props) => {
   const navigate= useNavigate();
   const dispatch = useDispatch();
-  const handleClick=()=>{
-    dispatch(logOut());
-    navigate("/login")
-  }
+  const handleClick = async () => {
+    await dispatch(logOut());
+    navigate("/login");
+    console.log("navigated to login page");
+  };
+  
   return (
     <div className="p-2 flex items-center shadow-xl">
       <button className="bg-main-color p-2 w-8 h-8 rounded-full text-white flex items-center justify-center ">

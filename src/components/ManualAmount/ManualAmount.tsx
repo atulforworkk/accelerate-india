@@ -7,7 +7,6 @@ const ManualAmount = () => {
   const Navigate = useNavigate();
   const [inputValue, setInputValue] = useState<string>("");
   const [buttonValue, setButtonValue] = useState<boolean>(true);
-  console.log("🚀 ~ ManualAmount ~ setInputValue:", inputValue);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(e.target.value);
