@@ -6,7 +6,7 @@ type Props = {
 };
 
 const PostAuthHeader = ({ heading }: Props) => {
-  const handleClcik=()=>{
+  const handleClick=()=>{
 
   }
   return (
@@ -15,7 +15,7 @@ const PostAuthHeader = ({ heading }: Props) => {
         &lt;
       </button>
       <h1 className="text-center flex-grow font-bold">{heading}</h1>
-      <button className="bg-main-color p-2 w-20 h-8 rounded-full text-white flex items-center justify-center hover:bg-custom-Purple" onClick={handleClcik}>
+      <button className="bg-main-color p-2 w-20 h-8 rounded-full text-white flex items-center justify-center hover:bg-custom-Purple" onClick={handleClick}>
         Logout
       </button>
     </div>

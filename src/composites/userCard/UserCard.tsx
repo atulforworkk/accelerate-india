@@ -4,7 +4,7 @@ import React from 'react'
 
 const UserCard = () => {
   return (
-    <div className="border rounded-2xl col-span-6 flex p-2">
+    <div className="border rounded-2xl col-span-6 flex p-2 ">
     <div>
       <img
         src={images.userImage}

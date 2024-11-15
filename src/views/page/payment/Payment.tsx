@@ -2,9 +2,8 @@ import PostAuthHeader from '@/components/postAuthHeader/PostAuthHeader'
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
 
-type Props = {}
 
-const Payment = (props: Props) => {
+const Payment = () => {
     const navigate = useNavigate();
 
     setTimeout(() => {
