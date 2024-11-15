@@ -17,16 +17,18 @@ const LoginForm = (props: Props) => {
   const formik = useFormik({
    initialValues,
     validationSchema: Yup.object({
-      username: Yup.string().email("Invalid email address").required("Email is required "),
+      // username: Yup.string().email("Invalid email address").required("Email is required "),
       password: Yup.string()
         .min(8, "Password must be at least 8 characters")
         .required("Password should be valid  "),
     }),
     onSubmit: (values) => {
-      dispatch(login({
-        username: 'emilys',
-        password: 'emilyspass',
-      }))
+      // dispatch(login({
+      //   username: 'emilys',
+      //   password: 'emilyspass',
+      // }))
+      dispatch(login(values))
+      console.log("values given out,",values);
     },
   });
   const {values}= formik;
@@ -41,12 +43,12 @@ const LoginForm = (props: Props) => {
         className=""
       >
         <div className="">      
-          <label htmlFor="">Email</label>
+          <label htmlFor="">Username</label>
           <Input
-          placeholder="Email"
+          placeholder="Username"
           name="username" 
         className="w-full sm:w-96"
-          type="email"
+          type="text"
           value={formik.values.username}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}

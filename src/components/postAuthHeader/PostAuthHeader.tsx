@@ -1,13 +1,17 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { logOut } from "@/store/authSlice";
 type Props = {
   heading: string | null;
 };
 
 const PostAuthHeader = ({ heading }: Props) => {
+  const navigate= useNavigate();
+  const dispatch = useDispatch();
   const handleClick=()=>{
-
+    dispatch(logOut());
+    navigate("/login")
   }
   return (
     <div className="p-2 flex items-center shadow-xl">

@@ -17,6 +17,9 @@ export const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
+    logOut: (state) => {
+      localStorage.removeItem('token');  
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -34,8 +37,6 @@ export const authSlice = createSlice({
       });
   },
 })
-
-// Action creators are generated for each case reducer function
-export const { } = authSlice.actions
+export const {logOut  } = authSlice.actions
 
 export default authSlice.reducer
