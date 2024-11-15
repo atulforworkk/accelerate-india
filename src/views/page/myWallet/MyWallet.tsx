@@ -11,15 +11,9 @@ const MyWallet = () => {
     <div>
       <PostAuthHeader heading="My Wallet" />
       <div className="grid grid-cols-1 md:grid-cols-12 gap-4 p-2">
-        {/* USER SECTION  */}
         <UserCard />
         <AvailableCredits/>
-        <div className="">
-          <div className="w-full rounded-2xl flex gap-4 flex-wrap">
             <Card />
-            
-          </div>
-        </div>
       </div>
       <div>
         <TransactionView />

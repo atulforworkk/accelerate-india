@@ -10,7 +10,7 @@ const Card = () => {
       navigate("/payment");
     };
     return (
-      <div className="border rounded-2xl bg-light-gray  min-w-[350px]">
+      <div className="border rounded-2xl  col-span-6 md:col-span-12 bg-light-gray  min-w-[350px]">
         <div className="flex justify-between items-center m-3 ">
           <h1 className="font-bold">All credits to your wallet</h1>
           <div className=" px-3  py-0.5 rounded-full bg-light-purple justify-around">
@@ -20,7 +20,6 @@ const Card = () => {
         <p className="text-sm m-3 font-light">
           Choose from our most purchased options.
         </p>
-        {/* money component */}
         <div className="border border-main-color rounded-2xl flex flex-col  ">
         <div className="flex items-center">
           <Radio />
