@@ -37,7 +37,7 @@ const ManualAmount = () => {
         placeholder="Enter here"
         onChange={handleChange}
       />
-
+{/* 
       {buttonValue ? (
         <button
           className="bg-[#0000330F] text-[#00083046] font-semibold p-2 w-full rounded-full my-3"
@@ -46,14 +46,14 @@ const ManualAmount = () => {
         >
           Proceed to pay
         </button>
-      ) : (
+      ) : ( */}
         <button
           className="bg-main-color text-white p-2 w-full rounded-full my-3"
           onClick={handleClick}
         >
           Proceed to pay
         </button>
-      )}
+      {/* )} */}
     </div>
   );
 };

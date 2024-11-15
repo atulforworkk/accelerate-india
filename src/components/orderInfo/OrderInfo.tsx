@@ -7,7 +7,7 @@ type Props = {
 
 const OrderInfo = ({info,data}: Props) => {
   return (
-         <div className="flex justify-between">
+         <div className="flex justify-between px-4 py-2">
                 <p>{info}</p>
                 <p>{data}</p>
             </div>

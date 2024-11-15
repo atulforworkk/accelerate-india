@@ -4,10 +4,7 @@ import Card from "@/components/card/Card";
 import PostAuthHeader from "@/components/postAuthHeader/PostAuthHeader";
 import TransactionView from "@/composites/transaction/TransactionView";
 import UserCard from "@/composites/userCard/UserCard";
-import {  Radio } from "@mantine/core";
-import images from "images/images";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 const MyWallet = () => {
   return (
@@ -18,7 +15,7 @@ const MyWallet = () => {
         <UserCard />
         <AvailableCredits/>
         <div className="">
-          <div className=" w-full  rounded-2xl flex  gap-4">
+          <div className="w-full rounded-2xl flex gap-4 flex-wrap">
             <Card />
             
           </div>
